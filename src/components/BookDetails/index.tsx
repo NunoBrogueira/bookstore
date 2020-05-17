@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import './BookDetails.scss';
+import { ReactComponent as Writer } from '../../assets/man.svg';
 import { formatDate } from '../../utils/helper';
 import { Books } from '../../store/ducks/books/types';
 import Loading from '../Loading';
@@ -34,15 +35,15 @@ const BookDetails: React.FC<Props> = ({
 
     return (
         <div id="book">
-            <div className="book-container">
-                <img width="100%" src={book?.image} alt={book?.name}/>
-            </div>
-            <div className="book-container">
-                <h1>{book?.name}</h1>
-                <p>{book?.genre}</p>
-                <p>{book && formatDate(book?.date)}</p>
-                <hr />
-                <p>{book?.author.name}</p>
+            <img className="image" src={book.image} alt={book.name}/>
+            <div className="book-information">
+                <p className="name">{book.name}</p>
+                <p className={`category ${(book.genre).toLowerCase()}`}>{book?.genre}</p>
+                <p className="date">{formatDate(book.date)}</p>
+                <div className="author-details">
+                    <Writer />
+                    <p className="author-name">{book.author.name}</p>
+                </div>
             </div>
         </div>
     )
