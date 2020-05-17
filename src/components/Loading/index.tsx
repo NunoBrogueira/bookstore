@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { Spinner } from 'reactstrap';
-
-interface OwnProps {}
-
-const Loading: React.FC<OwnProps> = () => {
-
+const Loading: React.FC = () => {
+    
     return (
-        <Spinner color="primary" />
+        <React.Fragment>
+            Loading ...
+        </React.Fragment>
     )
 };
 
