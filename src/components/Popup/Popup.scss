@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+#pop-up {
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: rgba(0,0,0,.3);
+    white-space: pre-line;
+
+    .pop-up-content {
+        top: 50%;
+        left: 50%;
+        width: 50%;
+        position: absolute;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        padding: 40px;
+        border-radius: 10px;
+        border: 1px solid $light-gray;
+        background-color: $white;
+
+        .close {
+            display: flex;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+
+            svg {
+                width: 12px;
+                height: auto;
+                cursor: pointer;
+
+                path {
+                    fill: $light-gray;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 780px) {
+        .pop-up-content {
+            width: 70%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@import '../../styles/variables.scss';
+
+#header {
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    position: fixed;
+    background: #ffffff;
+    border-bottom: 1px solid $light-gray;
+    border-left: 1px solid $light-gray;
+    padding: 0 40px;
+
+    .header-mobile {
+        display: none;
+    }
+
+    @media (max-width: 780px) {
+        .header-mobile {
+            display: flex;
+
+            svg {
+                width: 16px;
+                height: auto;
+            }
+        }
+    }
+}

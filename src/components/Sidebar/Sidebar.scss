@@ -1,0 +1,80 @@
+@import '../../styles/variables.scss';
+
+#sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    background-color: $white;
+    border-right: 1px solid $light-gray;
+    overflow: hidden;
+
+    .content {
+        padding: 0 40px;
+
+        #brand {
+            display: flex;
+            height: 100px;
+
+            .title {
+                font-size: $font-size-medium;
+                font-weight: 400;
+                letter-spacing: 12px;
+                text-transform: uppercase;
+                margin: auto;
+            }
+        }
+    
+        .section {
+            margin: 40px 0 60px 0;
+    
+            .title {
+                font-size: $font-size-normal;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin: auto;
+                word-break: break-all;
+            }
+
+            .elements {
+                margin: 20px 0 0 0;
+
+                .filter {
+                    color: $blueish-gray;
+                    cursor: pointer;
+                    padding: 0;
+                    margin: 18px 0;
+
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                .filter-active {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 780px) {
+    #sidebar {
+        position: fixed;
+        transform: translateX(-780px);
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        z-index: 2;
+        overflow: hidden;
+        background: #fff;
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-delay: 0.2s;
+        transition-timing-function: ease;
+
+        &.sidebar-open {
+            transform: translateX(0);
+            overflow: scroll;
+        }
+    }
+}

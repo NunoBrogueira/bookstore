@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+
+#book-item {
+    max-width: 350px;
+
+    .image {
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .book-details {
+        width: auto;
+        padding: 10px;
+
+        .name {
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+        .category {
+            width: fit-content;
+            font-weight: 600;
+            margin: 10px 0 0 0;
+            padding: 5px 10px;
+            border-radius: 20px;
+
+            &.art {
+                color: white;
+                background: $moss-green;
+            }
+            &.children {
+                color: white;
+                background: $blue-bell;
+            }
+            &.comics {
+                color: white;
+                background: $eton-blue;
+            }
+            &.drama {
+                color: white;
+                background: $dark-jungle-green;
+            }
+            &.fantasy {
+                color: white;
+                background: $lavender-blue;
+            }
+            &.guide {
+                color: white;
+                background: $mellow-apricot;
+            }
+            &.health {
+                color: white;
+                background: $metallic-sunburst;
+            }
+            &.history {
+                color: white;
+                background: $flame;
+            }
+            &.horror {
+                color: white;
+                background: $primary;
+            }
+            &.math {
+                color: white;
+                background: $space-cadet;
+            }
+            &.mystery {
+                color: white;
+                background: $frost;
+            }
+            &.poetry {
+                color: white;
+                background: $turquoise;
+            }
+            &.romance {
+                color: white;
+                background: $mystic;
+            }
+            &.science {
+                color: white;
+                background: $dark-salmon;
+            }
+            &.satire {
+                color: white;
+                background: $teal;
+            }
+            &.travel {
+                color: white;
+                background: $dark-purple;
+            }
+        }
+        .date {
+            color: $secondary;
+            padding: 10px 0 0 0;
+        }
+        .author-details {
+            display: flex;
+            padding: 10px 0 0 0;
+
+            svg {
+                width: 16px;
+                height: auto;
+
+                path {
+                    fill: $secondary;
+                }
+            }
+            .author-name {
+                color: $secondary;
+                margin: 0 0 0 5px;
+            }
+        }
+    }
+}

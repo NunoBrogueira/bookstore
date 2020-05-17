@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+#book {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    min-width: 200px;
+
+    .book-container {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    #book {
+        display: flex;
+        flex-direction: column;
+    }
+}
